@@ -29,7 +29,7 @@ There were some endpoints that were not checking for login previously (before b2
 
 ## Help Support SpacePanel
 
-We just recently started an Indiegogo campaign - please consider [contributing](https://www.indiegogo.com/projects/spacepanel/x/9964461) if you like where SpacePanel is going!
+Please consider contributing code and other such things to this project!
 
 ---
 
@@ -47,7 +47,7 @@ We just recently started an Indiegogo campaign - please consider [contributing](
 
 ## Supported Providers
 
-In the most recent release support for offsite virtual machines was added. Space currently supports the following Cloud/VPS providers:
+In the most recent release support for off-site virtual machines was added. Space currently supports the following Cloud/VPS providers:
 
 * [DigitalOcean](https://www.digitalocean.com/)
 * [Linode](https://www.linode.com)
@@ -58,8 +58,8 @@ This section will be updated as support for more providers is added. If you have
 
 ## Installation
 
-1. Install git client `yum install git` for CentOS 'apt-get install git' for Debian/Ubuntu. 
-2. `mkdir /srv/space && cd /srv/space && git clone https://github.com/SpacePanel/space-personal.git .`
+1. Install git client `yum install git` for CentOS `apt-get install git` for Debian/Ubuntu. 
+2. `mkdir /srv/space && cd /srv/space && git clone https://github.com/EidolonHost/space-personal.git .`
 3. Configure `virbr0` as a bridge interface, [this](http://www.linux-kvm.org/page/Networking) may be useful in accomplishing this.
 4. `./scripts/setup.sh` - This will install all dependencies, start necessary services and start Space.
 5. Navigate to `your.ip.address.here:10051/setup` to complete the setup process.
@@ -75,20 +75,24 @@ This section will be updated as support for more providers is added. If you have
 
 ## Troubleshooting
 
-<dl>
-  <dt>Celery didn't start</dt>
-  <dd>This is a known issue, you may need to run `export C_FORCE_ROOT="true"` as root before Celery will start. You can manually start Celery if it fails using `./srv/space/celery`.
-  <dt>I see command gunicorn was not found</dt>
-  <dd>This means pip failed to install stuff, first make sure the `pip` command works. If it doesn't, install python-pip using yum `yum install python-pip` or easy_install `easy_install pip`. After pip is installed, install the requirements `pip -r /srv/space/requirements.txt`.</dd>
-  <dt>Experiencing general weirdness, things not installing, etc.</dt>
-  <dd>Other strangeness is usually attributed to not running Space as `root`, make sure you are using the root user when installing Space, starting/stopping space, etc.</dd>
-  <dt>DHCPD failed to start</dt>
-  <dd>This is expected (sort of). You should see DHCPD start normally after you add an IP range. If that doesn't happen, `dnsmasq` is likely running on that port. Kill it with `pkill dnsmasq` and then try `service dhcpd start`.</dd>
-  <dt>I'm seeing errors when I try to make a Linode/Droplet, or nothing is happening at all</dt>
-  <dd>You probably forgot to input your API key, do that on `/settings`.</dd>
-  <dt>Other stuff</dt>
-  <dd>Space is new and I don't have a ton of people to test it, so there are <strong>certainly</strong> problems I'm not aware of. If you encounter one, please open an issue and I'll take a look</dd>
-</dl>
+0. Celery didn't start
+
+This is a known issue, you may need to run `export C_FORCE_ROOT="true"` as root before Celery will start. You can manually start Celery if it fails using `./srv/space/celery`.
+
+2. I see command gunicorn was not found
+This means pip failed to install stuff, first make sure the `pip` command works. If it doesn't, install python-pip using yum `yum install python-pip` or easy_install `easy_install pip`. After pip is installed, install the requirements `pip -r /srv/space/requirements.txt`.
+
+3. Experiencing general weirdness, things not installing, etc.
+Other strangeness is usually attributed to not running Space as `root`, make sure you are using the root user when installing Space, starting/stopping space, etc.
+
+4. DHCPD failed to start
+This is expected (sort of). You should see DHCPD start normally after you add an IP range. If that doesn't happen, `dnsmasq` is likely running on that port. Kill it with `pkill dnsmasq` and then try `service dhcpd start`.
+
+5. I'm seeing errors when I try to make a Linode/Droplet, or nothing is happening at all
+You probably forgot to input your API key, do that on `/settings`.
+
+6. Other stuff
+Space is new and I don't have a ton of people to test it, so there are **certainly** problems I'm not aware of. If you encounter one, please open an issue and I'll take a look.
 
 ---
 
