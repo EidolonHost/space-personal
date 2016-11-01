@@ -41,7 +41,7 @@ We just recently started an Indiegogo campaign - please consider [contributing](
 * MongoDB
 * KVM (currently only support virtualization technology)
 * RabbitMQ (used by Celery)
-* Variety of python packages shown [here](https://github.com/silverp1/space-personal/blob/master/requirements.txt)
+* Variety of python packages shown [here](https://github.com/EidolonHost/space-personal/blob/master/requirements.txt)
 
 ---
 
