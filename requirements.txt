@@ -12,6 +12,6 @@ celery==3.1.17
 python-crontab==1.9.2
 gunicorn==19.2.1
 python-digitalocean==1.10.1
-linode==1.1.1
+linode==0.4
 psutil==2.2.1
 requests>=2.5.1
