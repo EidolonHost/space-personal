@@ -10,7 +10,7 @@ urlgrabber==3.1.0
 urllib3==1.5
 celery==3.1.17
 python-crontab==1.9.2
-gunicorn==19.2.1
+gunicorn==19.6.0
 python-digitalocean==1.10.1
 linode==0.4
 psutil==2.2.1
