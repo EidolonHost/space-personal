@@ -75,24 +75,29 @@ This section will be updated as support for more providers is added. If you have
 
 ## Troubleshooting
 
-0. Celery didn't start
+1.Celery didn't start
 
-This is a known issue, you may need to run `export C_FORCE_ROOT="true"` as root before Celery will start. You can manually start Celery if it fails using `./srv/space/celery`.
+ This is a known issue, you may need to run `export C_FORCE_ROOT="true"` as root before Celery will start. You can manually start Celery if it fails using `./srv/space/celery`.
 
-2. I see command gunicorn was not found
-This means pip failed to install stuff, first make sure the `pip` command works. If it doesn't, install python-pip using yum `yum install python-pip` or easy_install `easy_install pip`. After pip is installed, install the requirements `pip -r /srv/space/requirements.txt`.
+2.I see command `gunicorn was not found`
 
-3. Experiencing general weirdness, things not installing, etc.
-Other strangeness is usually attributed to not running Space as `root`, make sure you are using the root user when installing Space, starting/stopping space, etc.
+ This means pip failed to install stuff, first make sure the `pip` command works. If it doesn't, install python-pip using yum `yum install python-pip` or easy_install `easy_install pip`. After pip is installed, install the requirements `pip -r /srv/space/requirements.txt`.
 
-4. DHCPD failed to start
-This is expected (sort of). You should see DHCPD start normally after you add an IP range. If that doesn't happen, `dnsmasq` is likely running on that port. Kill it with `pkill dnsmasq` and then try `service dhcpd start`.
+3.Experiencing general weirdness, things not installing, etc.
 
-5. I'm seeing errors when I try to make a Linode/Droplet, or nothing is happening at all
-You probably forgot to input your API key, do that on `/settings`.
+ Other strangeness is usually attributed to not running Space as `root`, make sure you are using the root user when installing Space, starting/stopping space, etc.
 
-6. Other stuff
-Space is new and I don't have a ton of people to test it, so there are **certainly** problems I'm not aware of. If you encounter one, please open an issue and I'll take a look.
+4.DHCPD failed to start
+
+ This is expected (sort of). You should see DHCPD start normally after you add an IP range. If that doesn't happen, `dnsmasq` is likely running on that port. Kill it with `pkill dnsmasq` and then try `service dhcpd start`.
+
+5.I'm seeing errors when I try to make a Linode/Droplet, or nothing is happening at all
+
+ You probably forgot to input your API key, do that on `/settings`.
+
+6.Other stuff
+
+ Space is new and I don't have a ton of people to test it, so there are **certainly** problems I'm not aware of. If you encounter one, please open an issue and I'll take a look.
 
 ---
 
