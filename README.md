@@ -9,6 +9,13 @@ The project's official website is: [https://spacepanel.io](https://spacepanel.io
 ## Update
 The site no longer has any sort of link to the Open Source version. The repository for SpacePanel has since then been deleted. There are several forks that exist and none of them have had code pushed, including this repository as of this commit.
 
+## Update 1.2
+I have begun to work on this project, myself. I'm currently updating bits and pieces of Space-Personal and working on getting it into a more usable state... so bear with me while I work on do that. At the same time, though, I want to note that I'm learning how Python works.
+
+So... yes, that means I'm completely unfamiliar with how Python works in general. But I will be using lots of tools to help me with testing and making sure I release at least moderately functional code that won't blow up... and hopefully, not create any exploit holes.
+
+However, if you _do_ find one, please let me know immediately, along with a patch by way of messaging me through GitHub. I **will** act on a security issue that's been reported.
+
 ---
 
 ## Current Version - 0.1.3
