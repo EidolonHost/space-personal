@@ -74,9 +74,8 @@ if [ "$OS" == "centos" ]
     rpm -Uvh http://www.rabbitmq.com/releases/rabbitmq-server/v3.1.4/rabbitmq-server-3.1.4-1.noarch.rpm
     yum update -y
 else
-  echo 'deb http://www.rabbitmq.com/debian/ testing main' | tee /etc/apt/sources.list.d/rabbitmq.list
-  wget https://www.rabbitmq.com/rabbitmq-signing-key-public.asc
-  apt-key add rabbitmq-signing-key-public.asc
+  echo 'deb http://www.rabbitmq.com/debian/ testing main' | sudo tee /etc/apt/sources.list.d/rabbitmq.list
+  wget -O- https://www.rabbitmq.com/rabbitmq-release-signing-key.asc | sudo apt-key add -
   apt-get update
   apt-get install -y erlang
 fi
