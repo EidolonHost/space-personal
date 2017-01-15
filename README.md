@@ -4,12 +4,11 @@ Space is a simple virtualization control panel written in Python with Flask. Spa
 
 This project is still in a relatively early stage of development, it is feature complete but there is still a fair amount of work to be done. With that being said, use at your own risk! 
 
-The project's official website is: [https://spacepanel.io](https://spacepanel.io) 
+The project's official website is: [https://spacepanel.io](https://spacepanel.io) now deprecated. We'll set up a new website regarding this project and rename this project at a later time to avoid conflicts as after all, this is a fork.
 
 ## Update
 The site no longer has any sort of link to the Open Source version. The repository for SpacePanel has since then been deleted. There are several forks that exist and none of them have had code pushed, including this repository as of this commit.
 
-## Update 1.2
 I have begun to work on this project, myself. I'm currently updating bits and pieces of Space-Personal and working on getting it into a more usable state... so bear with me while I work on do that. At the same time, though, I want to note that I'm learning how Python works.
 
 So... yes, that means I'm completely unfamiliar with how Python works in general. But I will be using lots of tools to help me with testing and making sure I release at least moderately functional code that won't blow up... and hopefully, not create any exploit holes.
@@ -67,10 +66,10 @@ This section will be updated as support for more providers is added. If you have
 
 1. Install git client `yum install git` for CentOS `apt-get install git` for Debian/Ubuntu. 
 2. `mkdir /srv/space && cd /srv/space && git clone https://github.com/EidolonHost/space-personal.git .`
-3. Configure `virbr0` as a bridge interface, [this](http://www.linux-kvm.org/page/Networking) may be useful in accomplishing this.
+3. Configure `virbr0` as a bridge interface, [this](http://www.linux-kvm.org/page/Networking) may be useful in accomplishing this. Otherwise, perhaps suggest a good `virbr0` set-up that would reasonably work well in a default state?
 4. `./scripts/setup.sh` - This will install all dependencies, start necessary services and start Space.
 5. Navigate to `your.ip.address.here:10051/setup` to complete the setup process.
-6. Make the directories for your disks, images and configs, by default these are `/var/disks`, `/var/images`, `/var/configs`. Make them with `mkdir /var/disks /var/images /var/configs` if you are using the defaults. 
+6. Make the directories for your disks, images and configs, by default these are `/var/disks`, `/var/images`, `/var/configs`. Make them with `mkdir /var/disks /var/images /var/configs` if you are using the defaults. Failing to do this **will** break your install.
 7. Add an image to the `/var/images` directory, you can use wget to do that. 
 8. Login via `your.ip.address.here:10051/login`
 9. Go to `Networking` and add an IP range. 
@@ -97,10 +96,12 @@ This section will be updated as support for more providers is added. If you have
 4.DHCPD failed to start
 
  This is expected (sort of). You should see DHCPD start normally after you add an IP range. If that doesn't happen, `dnsmasq` is likely running on that port. Kill it with `pkill dnsmasq` and then try `service dhcpd start`.
+ 
+ Update: It appears that `dhcpd` is properly installed but isn't configured, nor detected as running due to it not being configured. Presumably we need to set up a default `dhcpd.conf` that works for Space-Personal in order for this to work properly.
 
 5.I'm seeing errors when I try to make a Linode/Droplet, or nothing is happening at all
 
- You probably forgot to input your API key, do that on `/settings`.
+ You probably forgot to input your API key, do that on `/settings`. Alternatively, Linode/Droplet support is badly broken and should not be used at this time just yet.
 
 6.Other stuff
 
