@@ -30,7 +30,7 @@ This update added the following:
 
 ## Please Note:
 
-There were some endpoints that were not checking for login previously (before b2e1366d4b3f2b5b057d8d6bb20118538dea658e). If you have a version from before that commit installed, please update!
+There were some endpoints that were not checking for login previously. If you have a version from before that commit installed, please update!
 
 ---
 
