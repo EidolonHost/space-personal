@@ -7,13 +7,17 @@ This project is still in a relatively early stage of development, it is feature 
 The project's official website is: [https://spacepanel.io](https://spacepanel.io) now deprecated. We'll set up a new website regarding this project and rename this project at a later time to avoid conflicts as after all, this is a fork.
 
 ## Update
-The site no longer has any sort of link to the Open Source version. The repository for SpacePanel has since then been deleted. There are several forks that exist and none of them have had code pushed, including this repository as of this commit.
+The site no longer has any sort of link to the Open Source version. The repository for SpacePanel is... surprisingly, still present [here](https://github.com/silverp1/space-personal). At one point, it was deleted. There are several forks that exist and none of them have had code pushed, including this repository as of this commit. This project is now the only one that's still got working code for SpacePersonal.
 
 I have begun to work on this project, myself. I'm currently updating bits and pieces of Space-Personal and working on getting it into a more usable state... so bear with me while I work on do that. At the same time, though, I want to note that I'm learning how Python works.
 
 So... yes, that means I'm completely unfamiliar with how Python works in general. But I will be using lots of tools to help me with testing and making sure I release at least moderately functional code that won't blow up... and hopefully, not create any exploit holes.
 
 However, if you _do_ find one, please let me know immediately, along with a patch by way of messaging me through GitHub. I **will** act on a security issue that's been reported.
+
+## LICENSING
+
+The [IndieGoGo page](https://www.indiegogo.com/projects/spacepanel-not-currently-active#/) says it's Open-Source but there is currently no active license of any sort attached, so technically this project is in a legal grey area.
 
 ---
 
