@@ -54,7 +54,7 @@ def sync_status():
 
             data.set_server_inconsistent(server['_id'], 1)
         elif server['state'] == 1 and real_id in real_status:
-            message = "Checked %s, DB says it should be running, but is is not running." % real_id
+            message = "Checked %s, DB says it should be running, but it is not running." % real_id
             create_log(message, 2)
 
             inconsistent_event(server['_id'])
